@@ -1,7 +1,7 @@
 <header>
     <div class="header-container">
       <figure class="logo-wrapper">
-            <img class="logo" src="../../img/dc-logo.png" alt="">
+            <img class="logo" src="{{asset('images/dc-logo.png')}}" alt="">
       </figure>
 
       <ul class="navbar">

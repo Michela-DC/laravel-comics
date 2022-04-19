@@ -1,6 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;
-
-500&display=swap);* {
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap);* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -35,7 +33,6 @@ a {
   text-transform: uppercase;
   height: 100%;
 }
-
 .navbar li a {
   color: black;
   font-weight: bold;
@@ -44,11 +41,9 @@ a {
   align-items: center;
   position: relative;
 }
-
 .navbar li:nth-child(2) a {
   color: #0082F9;
 }
-
 .navbar li:nth-child(2) a::after {
   content: "";
   display: block;
@@ -61,7 +56,7 @@ a {
 
 .jumbotron {
   height: 398px;
-  background-image: url(/images/jumbotron.jpg?1b0a3671766964a4114f90322970b124);
+  background-image: url("../images/jumbotron.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,7 +65,6 @@ a {
 .current-series {
   background-color: #1C1C1C;
 }
-
 .current-series .container {
   width: 80%;
   margin: 0 auto;
@@ -78,7 +72,6 @@ a {
   flex-direction: column;
   position: relative;
 }
-
 .current-series .container .section-title {
   text-transform: uppercase;
   color: white;
@@ -90,14 +83,12 @@ a {
   bottom: 96%;
   background-color: #0082F9;
 }
-
 .current-series .container .comics-container {
   display: flex;
   flex-wrap: wrap;
   padding-top: 53px;
   gap: 2%;
 }
-
 .current-series .container .comics-container .card-wrapper {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -107,37 +98,28 @@ a {
   color: white;
   font-size: 14px;
 }
-
 .current-series .container .comics-container .series-image {
   color: white;
   overflow: hidden;
   height: 169px;
   margin-bottom: 10px;
 }
-
 .current-series .container .comics-container .series-image img {
   width: 100%;
 }
-
-.current-series .container .comics-container .series-info .series-name,
-.current-series .container .comics-container .series-info .type,
-.current-series .container .comics-container .series-info .price {
+.current-series .container .comics-container .series-info .series-name, .current-series .container .comics-container .series-info .type, .current-series .container .comics-container .series-info .price {
   margin-bottom: 7px;
 }
-
 .current-series .container .comics-container .series-info .series-name {
   text-transform: uppercase;
   font-weight: 500;
 }
-
 .current-series .container .comics-container .series-info .type {
   color: #acacac;
 }
-
 .current-series .container .comics-container .series-info .price {
   color: #55BA59;
 }
-
 .current-series .container .load-more {
   width: 185px;
   height: 35px;
@@ -151,7 +133,7 @@ a {
 }
 
 footer {
-  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  background-image: url("../images/footer-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -163,7 +145,7 @@ footer {
 .info-section .container {
   width: 80%;
   margin: 0 auto;
-  background-image: url(/images/dc-logo-bg.png?f4404ce9dc132a08a47f19e3f73f1417);
+  background-image: url("../images/dc-logo-bg.png");
   background-position: right;
   background-size: 45%;
   background-repeat: no-repeat;
@@ -171,22 +153,18 @@ footer {
   gap: 25px;
   padding: 55px 0;
 }
-
 .info-section .container .col h4 {
   text-transform: uppercase;
   color: white;
   margin-bottom: 10px;
 }
-
 .info-section .container .col li {
   line-height: 20px;
 }
-
 .info-section .container .col li a {
   color: #acacac;
   font-size: 12px;
 }
-
 .info-section .container .col .dc-comics {
   margin-bottom: 25px;
 }
@@ -198,7 +176,6 @@ footer {
   display: flex;
   align-items: center;
 }
-
 .social-section .container {
   width: 80%;
   margin: 0 auto;
@@ -206,7 +183,6 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
-
 .social-section .container button {
   background-color: transparent;
   border: 2px solid #0082F9;
@@ -214,26 +190,21 @@ footer {
   padding: 12px;
   text-transform: uppercase;
 }
-
 .social-section .container .social-media {
   display: flex;
   align-items: center;
   gap: 20px;
   color: #0082F9;
 }
-
 .social-section .container .social-media .social-wrapper {
   display: flex;
   align-items: center;
   gap: 18px;
 }
-
 .social-section .container .social-media .social-wrapper a {
   display: flex;
   align-items: center;
 }
-
 .social-section .container .social-media .social-wrapper a img {
   height: 30px;
 }
-

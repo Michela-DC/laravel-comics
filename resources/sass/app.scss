@@ -70,7 +70,7 @@ a{
 
 .jumbotron{
     height: 398px;
-    background-image: url('../img/jumbotron.jpg');
+    background-image: url('../images/jumbotron.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,7 +164,7 @@ a{
 //   FOOTER ----------------
 
 footer{
-    background-image: url('../img/footer-bg.jpg');
+    background-image: url('../images/footer-bg.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,7 +176,7 @@ footer{
     
     .container{
         @include container;
-        background-image: url('../img/dc-logo-bg.png');
+        background-image: url('../images/dc-logo-bg.png');
         background-position: right;
         background-size: 45%;
         background-repeat: no-repeat;
@@ -202,6 +202,7 @@ footer{
         }
     }
 }
+
 .social-section{ 
     height: 90px;
     background-color: #303030;
@@ -234,7 +235,7 @@ footer{
 
                 a{
                     @include flex-alignCenter;
-                    
+
                     img{
                         height: 30px;
                     }
