@@ -17,6 +17,55 @@ a{
     text-decoration: none;
 }
 
+// HEADER -------------------
+
+.header-container {
+    @include container;
+    @include flex-alignCenter;
+    height: 115px;
+    justify-content: space-between;
+}
+
+.logo-wrapper {
+
+    .logo{
+        height: 80px;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-transform: uppercase;
+    height: 100%;
+
+    li {
+
+        a{
+            color: black;  
+            font-weight: bold; 
+            height: 100%; 
+            @include flex-alignCenter;
+            position: relative;
+        }
+    }
+
+    li:nth-child(2) a{
+        color: $blue;
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            bottom: 0;
+            background-color: $blue;
+        }
+    }
+}
+
 // MAIN ---------------------
 
 .jumbotron{
@@ -111,3 +160,86 @@ a{
         }
     }
   }
+
+//   FOOTER ----------------
+
+footer{
+    background-image: url('../img/footer-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.info-section{
+    
+    .container{
+        @include container;
+        background-image: url('../img/dc-logo-bg.png');
+        background-position: right;
+        background-size: 45%;
+        background-repeat: no-repeat;
+        display: flex;
+        gap: 25px;
+        padding: 55px 0;
+        .col{
+            h4{
+                text-transform: uppercase;
+                color: white;
+                margin-bottom: 10px;
+            }
+            li{
+                line-height: 20px;
+                a{
+                    color: #acacac;
+                    font-size: 12px;
+                }
+            }
+            .dc-comics{
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+.social-section{ 
+    height: 90px;
+    background-color: #303030;
+    flex-grow: 1;
+    @include flex-alignCenter;
+
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        @include flex-alignCenter;
+        justify-content: space-between;
+        
+        button{
+            background-color: transparent;
+            border: 2px solid $blue;
+            color: white;
+            padding: 12px;
+            text-transform: uppercase;
+        }
+
+        .social-media{
+            @include flex-alignCenter;
+            gap: 20px;
+            color: $blue;
+
+            .social-wrapper{
+                display: flex;
+                align-items: center;
+                gap: 18px;
+
+                a{
+                    @include flex-alignCenter;
+                    
+                    img{
+                        height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
