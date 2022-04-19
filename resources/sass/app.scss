@@ -162,6 +162,41 @@ a{
     }
   }
 
+// Store -------------------
+
+.store-container {
+    @include container;
+}
+.menu-section {
+    background-color: $blue;
+
+    .menu{
+        height: 115px;
+        @include flex-alignCenter;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+
+        .options{
+            @include flex-alignCenter;
+            gap: 10px;
+
+            img{
+                height: 50px;
+            }
+
+            &:last-child > img{
+                width: 53px;
+                height: 36px;
+            }
+            
+            a{
+                color: white;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
 //   FOOTER ----------------
 
 footer{
@@ -210,7 +245,7 @@ footer{
     flex-grow: 1;
     @include flex-alignCenter;
 
-    .container{
+    .social-container{
         width: 80%;
         margin: 0 auto;
         @include flex-alignCenter;
@@ -230,16 +265,19 @@ footer{
             color: $blue;
 
             .social-wrapper{
-                display: flex;
-                align-items: center;
+                @include flex-alignCenter;
                 gap: 18px;
 
-                a{
+                .social-link{
                     @include flex-alignCenter;
-
-                    img{
-                        height: 30px;
-                    }
+                    justify-content: center;
+                    color: #303030;
+                    font-size: 1.3rem;
+                    background-color: #797979;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    padding-top: 2px;
                 }
             }
         }

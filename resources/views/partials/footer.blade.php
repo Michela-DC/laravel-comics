@@ -42,7 +42,7 @@
     </section>
 
     <section class="social-section">
-        <div class="container">
+        <div class="social-container">
             <button>
                 sign-up now!
             </button>
@@ -51,9 +51,29 @@
                 <h3>Follow us</h3>
 
                 <ul class="social-wrapper">
-                    <li v-for="(item, i) in icons" :key="i">
-                        <a href="">
-                            <img src="" alt="">
+                    <li>
+                        <a class="social-link" href="">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-link" href="">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-link" href="">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-link" href="">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-link" href="">
+                            <i class="fa-solid fa-location-dot"></i>
                         </a>
                     </li>
                 </ul>

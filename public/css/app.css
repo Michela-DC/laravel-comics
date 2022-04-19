@@ -132,6 +132,38 @@ a {
   background-color: #0082F9;
 }
 
+.store-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.menu-section {
+  background-color: #0082F9;
+}
+.menu-section .menu {
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+}
+.menu-section .menu .options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu-section .menu .options img {
+  height: 50px;
+}
+.menu-section .menu .options:last-child > img {
+  width: 53px;
+  height: 36px;
+}
+.menu-section .menu .options a {
+  color: white;
+  font-size: 15px;
+}
+
 footer {
   background-image: url("../images/footer-bg.jpg");
   background-position: center;
@@ -176,35 +208,40 @@ footer {
   display: flex;
   align-items: center;
 }
-.social-section .container {
+.social-section .social-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.social-section .container button {
+.social-section .social-container button {
   background-color: transparent;
   border: 2px solid #0082F9;
   color: white;
   padding: 12px;
   text-transform: uppercase;
 }
-.social-section .container .social-media {
+.social-section .social-container .social-media {
   display: flex;
   align-items: center;
   gap: 20px;
   color: #0082F9;
 }
-.social-section .container .social-media .social-wrapper {
+.social-section .social-container .social-media .social-wrapper {
   display: flex;
   align-items: center;
   gap: 18px;
 }
-.social-section .container .social-media .social-wrapper a {
+.social-section .social-container .social-media .social-wrapper .social-link {
   display: flex;
   align-items: center;
-}
-.social-section .container .social-media .social-wrapper a img {
-  height: 30px;
+  justify-content: center;
+  color: #303030;
+  font-size: 1.3rem;
+  background-color: #797979;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding-top: 2px;
 }

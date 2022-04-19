@@ -39,4 +39,7 @@
             </div>
         </div>
 </section>
+
+@include('partials.store')
+
 @endsection
