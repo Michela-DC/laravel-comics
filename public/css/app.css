@@ -65,14 +65,14 @@ a {
 .current-series {
   background-color: #1C1C1C;
 }
-.current-series .container {
+.current-series .series-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   position: relative;
 }
-.current-series .container .section-title {
+.current-series .series-container .section-title {
   text-transform: uppercase;
   color: white;
   height: 53px;
@@ -83,13 +83,13 @@ a {
   bottom: 96%;
   background-color: #0082F9;
 }
-.current-series .container .comics-container {
+.current-series .series-container .comics-container {
   display: flex;
   flex-wrap: wrap;
   padding-top: 53px;
   gap: 2%;
 }
-.current-series .container .comics-container .card-wrapper {
+.current-series .series-container .comics-container .card-wrapper {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -98,29 +98,29 @@ a {
   color: white;
   font-size: 14px;
 }
-.current-series .container .comics-container .series-image {
+.current-series .series-container .comics-container .card-wrapper .series-image {
   color: white;
   overflow: hidden;
   height: 169px;
   margin-bottom: 10px;
 }
-.current-series .container .comics-container .series-image img {
+.current-series .series-container .comics-container .card-wrapper .series-image img {
   width: 100%;
 }
-.current-series .container .comics-container .series-info .series-name, .current-series .container .comics-container .series-info .type, .current-series .container .comics-container .series-info .price {
+.current-series .series-container .comics-container .card-wrapper .series-info .series-name, .current-series .series-container .comics-container .card-wrapper .series-info .type, .current-series .series-container .comics-container .card-wrapper .series-info .price {
   margin-bottom: 7px;
 }
-.current-series .container .comics-container .series-info .series-name {
+.current-series .series-container .comics-container .card-wrapper .series-info .series-name {
   text-transform: uppercase;
   font-weight: 500;
 }
-.current-series .container .comics-container .series-info .type {
+.current-series .series-container .comics-container .card-wrapper .series-info .type {
   color: #acacac;
 }
-.current-series .container .comics-container .series-info .price {
+.current-series .series-container .comics-container .card-wrapper .series-info .price {
   color: #55BA59;
 }
-.current-series .container .load-more {
+.current-series .series-container .load-more {
   width: 185px;
   height: 35px;
   align-self: center;

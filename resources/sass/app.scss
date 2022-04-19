@@ -79,7 +79,7 @@ a{
   .current-series{
     background-color: #1C1C1C;
 
-    .container {
+    .series-container {
         @include container;
         display: flex;
         flex-direction: column; 
@@ -102,7 +102,6 @@ a{
             flex-wrap: wrap;
             padding-top: 53px;
             gap: 2%;
-
             
             .card-wrapper{
                 height: fit-content;
@@ -110,42 +109,44 @@ a{
                 margin-bottom: 30px;
                 color: white;
                 font-size: 14px;
+                
+                .series-image{
+                    color: white;
+                    overflow: hidden;
+                    height: 169px; 
+                    margin-bottom: 10px;
+                    
+                    img{
+                        width: 100%;
+                        // potevo anche usare object-fit e object-position, togliendo overflow e height da series-image:
+                        // width: 100%;
+                        // display: block;
+                        // aspect-ratio: 1/1;
+                        // object-fit: cover;
+                        // object-position: center;
+                    }
+                }
+                .series-info{
+                    
+                    .series-name, .type, .price{
+                        margin-bottom: 7px;
+                    }
+                    .series-name{
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                    
+                    .type{
+                        color: #acacac;
+                    }
+                    
+                    .price{
+                        color: #55BA59;
+                    }
+                }
             }
-            .series-image{
-                color: white;
-                overflow: hidden;
-                height: 169px; 
-                margin-bottom: 10px;
-                
-                img{
-                    width: 100%;
-                    // potevo anche usare object-fit e object-position, togliendo overflow e height da series-image:
-                    // width: 100%;
-                    // display: block;
-                    // aspect-ratio: 1/1;
-                    // object-fit: cover;
-                    // object-position: center;
-                }
-            }
-            .series-info{
-                
-                .series-name, .type, .price{
-                    margin-bottom: 7px;
-                }
-                .series-name{
-                    text-transform: uppercase;
-                    font-weight: 500;
-                }
-                
-                .type{
-                    color: #acacac;
-                }
-                
-                .price{
-                    color: #55BA59;
-                }
-            }
-        }
+
+        } 
 
         .load-more{
             width: 185px;

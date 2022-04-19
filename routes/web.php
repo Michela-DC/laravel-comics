@@ -89,5 +89,5 @@ Route::get('/', function () {
         ]
     ];
 
-    return view('home', ["comics" => $comics]);
+    return view('pages.home', ["comics" => $comics]);
 });
