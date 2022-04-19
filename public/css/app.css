@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;
+
+500&display=swap);* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.jumbotron {
+  height: 398px;
+  background-image: url(/images/jumbotron.jpg?1b0a3671766964a4114f90322970b124);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.current-series {
+  background-color: #1C1C1C;
+}
+
+.current-series .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.current-series .container .section-title {
+  text-transform: uppercase;
+  color: white;
+  height: 53px;
+  width: 244px;
+  text-align: center;
+  line-height: 53px;
+  position: absolute;
+  bottom: 96%;
+  background-color: #0082F9;
+}
+
+.current-series .container .comics-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 53px;
+  gap: 2%;
+}
+
+.current-series .container .comics-container .card-wrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 15%;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 14px;
+}
+
+.current-series .container .comics-container .series-image {
+  color: white;
+  overflow: hidden;
+  height: 169px;
+  margin-bottom: 10px;
+}
+
+.current-series .container .comics-container .series-image img {
+  width: 100%;
+}
+
+.current-series .container .comics-container .series-info .series-name,
+.current-series .container .comics-container .series-info .type,
+.current-series .container .comics-container .series-info .price {
+  margin-bottom: 7px;
+}
+
+.current-series .container .comics-container .series-info .series-name {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.current-series .container .comics-container .series-info .type {
+  color: #acacac;
+}
+
+.current-series .container .comics-container .series-info .price {
+  color: #55BA59;
+}
+
+.current-series .container .load-more {
+  width: 185px;
+  height: 35px;
+  align-self: center;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 25px;
+  background-color: #0082F9;
+}
+
