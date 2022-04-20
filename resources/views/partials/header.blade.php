@@ -1,18 +1,3 @@
-@php
-    $options = [
-        'characters',
-        'comics',
-        'movies',
-        'tv',
-        'games',
-        'collectibles',
-        'videos',
-        'fans',
-        'news',
-        'shop'
-    ];
-@endphp
-
 <header>
     <div class="header-container">
       <figure class="logo-wrapper">
@@ -20,11 +5,41 @@
       </figure>
 
       <ul class="navbar">
-          @foreach ($options as $item)
             <li>
-                <a href="">{{$item}}</a>
+                <a href="">characters</a>
             </li>
-          @endforeach
+
+            <li>
+                <a href="{{ route('comics') }}">comics</a>
+            </li>
+
+            <li>
+                <a href="">movies</a>
+            </li>
+
+            <li>
+                <a href="">tv</a>
+            </li>
+
+            <li>
+                <a href="">games</a>
+            </li>
+
+            <li>
+                <a href="">collectibles</a>
+            </li>
+
+            <li>
+                <a href="">videos</a>
+            </li>
+
+            <li>
+                <a href="">fans</a>
+            </li>
+
+            <li>
+                <a href="">news</a>
+            </li>
       </ul>
     </div>
 </header>
