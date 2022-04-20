@@ -1,3 +1,18 @@
+@php
+    $options = [
+        'characters',
+        'comics',
+        'movies',
+        'tv',
+        'games',
+        'collectibles',
+        'videos',
+        'fans',
+        'news',
+        'shop'
+    ];
+@endphp
+
 <header>
     <div class="header-container">
       <figure class="logo-wrapper">
@@ -5,45 +20,11 @@
       </figure>
 
       <ul class="navbar">
+          @foreach ($options as $item)
             <li>
-                <a href="">characters</a>
+                <a href="">{{$item}}</a>
             </li>
-
-            <li>
-                <a href="">comics</a>
-            </li>
-
-            <li>
-                <a href="">movies</a>
-            </li>
-
-            <li>
-                <a href="">tv</a>
-            </li>
-            
-            <li>
-                <a href="">games</a>
-            </li>
-
-            <li>
-                <a href="">collectibles</a>
-            </li>
-
-            <li>
-                <a href="">videos</a>
-            </li>
-
-            <li>
-                <a href="">fans</a>
-            </li>
-
-            <li>
-                <a href="">news</a>
-            </li>
-
-            <li>
-                <a href="">shop</a>
-            </li>
+          @endforeach
       </ul>
     </div>
 </header>

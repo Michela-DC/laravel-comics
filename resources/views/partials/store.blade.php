@@ -1,30 +1,41 @@
+@php
+
+    $options = [ 
+        [
+            'image' => 'images/buy-comics-digital-comics.png',
+            'text' => 'digital comics', 
+        ],
+        [
+            'image' => 'images/buy-comics-merchandise.png',
+            'text' => 'dc merchandise',
+        ],
+        [
+            'image' => 'images/buy-comics-shop-locator.png',
+            'text' => 'subscription',
+        ],
+        [
+            'image' => 'images/buy-comics-subscriptions.png',
+            'text' => 'comic shop locator',
+        ],
+        [
+            'image' => 'images/buy-dc-power-visa.svg',
+            'text' => 'dc power visa',
+        ]
+    ];
+
+@endphp
+
 <section class="menu-section">
     <div class="store-container">
         <ul class="menu">
-            <li class="options" v-for="(option, i) in options" :key="i">
-                <img src="{{asset('images/buy-comics-digital-comics.png')}}" alt="">
-                <a href="">digital comics</a>
-            </li>
 
-            <li class="options" v-for="(option, i) in options" :key="i">
-                <img src="{{asset('images/buy-comics-merchandise.png')}}" alt="">
-                <a href="">dc merchandise</a>
-            </li>
+            @foreach ($options as $item)    
+                <li class="options">
+                    <img src="{{asset($item['image'])}}" alt="">
+                    <a href="">{{$item['text']}}</a>
+                </li>
+            @endforeach
 
-            <li class="options" v-for="(option, i) in options" :key="i">
-                <img src="{{asset('images/buy-comics-subscriptions.png')}}" alt="">
-                <a href="">subscription</a>
-            </li>
-
-            <li class="options" v-for="(option, i) in options" :key="i">
-                <img src="{{asset('images/buy-comics-shop-locator.png')}}" alt="">
-                <a href="">comic shop locator</a>
-            </li>
-
-            <li class="options" v-for="(option, i) in options" :key="i">
-                <img src="{{asset('images/buy-dc-power-visa.svg')}}" alt="">
-                <a href="">dc power visa</a>
-            </li>
         </ul>
     </div>
-</secn>
+</section>

@@ -267,18 +267,6 @@ footer{
             .social-wrapper{
                 @include flex-alignCenter;
                 gap: 18px;
-
-                .social-link{
-                    @include flex-alignCenter;
-                    justify-content: center;
-                    color: #303030;
-                    font-size: 1.3rem;
-                    background-color: #797979;
-                    width: 35px;
-                    height: 35px;
-                    border-radius: 50%;
-                    padding-top: 2px;
-                }
             }
         }
     }
