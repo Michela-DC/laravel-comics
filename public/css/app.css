@@ -90,23 +90,26 @@
 }
 .comic-info_container .advertisement .ad-content .ad-title {
   color: white;
-  align-self: center;
 }
-.comic-info_container .advertisement .ad-content .btn-apply {
+.comic-info_container .advertisement .ad-content .apply-visa {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.comic-info_container .advertisement .ad-content .apply-visa .btn-apply {
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: bold;
-  width: 150px;
-  height: 45px;
+  width: 130px;
+  height: 38px;
   background-color: #FFE665;
   border: none;
 }
-.comic-info_container .advertisement .ad-content .dc-visa {
+.comic-info_container .advertisement .ad-content .apply-visa .dc-visa {
   color: white;
   opacity: 0.7;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
+  font-size: 0.8rem;
+  align-self: flex-end;
 }
 
 .comic-specs {

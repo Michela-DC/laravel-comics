@@ -43,8 +43,11 @@
 
                 <div class="ad-content">
                     <h2 class="ad-title">unleash heroic rewards</h2>
-                    <button class="btn-apply">Apply now</button>
-                    <div class="dc-visa">dc power visa</div>
+                    
+                    <div class="apply-visa">
+                        <button class="btn-apply">Apply now</button>
+                        <div class="dc-visa">dc power visa</div>
+                    </div>
                 </div>
             </div>
         </div>
