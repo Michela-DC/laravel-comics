@@ -1,0 +1,46 @@
+.header-container {
+    @include container;
+    @include flex-alignCenter;
+    height: 115px;
+    justify-content: space-between;
+}
+
+.logo-wrapper {
+
+    .logo{
+        height: 80px;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-transform: uppercase;
+    height: 100%;
+
+    li {
+
+        a{
+            color: black;  
+            font-weight: bold; 
+            height: 100%; 
+            @include flex-alignCenter;
+            position: relative;
+        }
+    }
+
+    li:nth-child(2) a{
+        color: $blue;
+
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            bottom: 0;
+            background-color: $blue;
+        }
+    }
+}

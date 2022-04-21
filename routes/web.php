@@ -33,10 +33,10 @@ Route::get('/comics/{id}', function ($id) {
 
     $single_comic = $comics[$id]; // a single_comic assegno il singolo dato che è dentro a comics nella posizione id
  
-    return view('partials.detail', ["comics" => $single_comic]); 
-    // qui come vista, quando seguo questa route, ritorno il file detail che è nella cartella partial e assegno alla chiave comics il valore dentro a single_comic
+    return view('pages.detail', ["comics" => $single_comic]); 
+    // qui come vista, quando seguo questa route, ritorno il file detail che è nella cartella partials e assegno alla chiave comics il valore dentro a single_comic
     // oppure potevo fare la stessa cosa usando il metodo with che ci permette di passare un solo parametro alla volta: return view('pages.detail')->with('comics', $detail); 
 
-})->where('id', '[0-9]+');
+})->where('id', '[0-9]+')->name('comic.show');
 // al metodo where passo come parametri il nome del parametro passato alla rotta e l'indicazione in cui specifico che deve contenere solo caratteri numerici 
 // quindi con where dico che se i parametri che nella rotta vengono passati come id non rispettano la condizione di essere solo valori numerici, allora la rotta non può funzionare 

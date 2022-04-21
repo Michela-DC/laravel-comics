@@ -15,15 +15,21 @@
 
                 <div class="comics-container">
 
-                    @foreach($comics as $item)
+                    @foreach($comics as $key => $item)
                         <div class="card-wrapper">
+                            {{-- come parametri di route, oltre al nome, gli passo un secondo parametro in cui specifico che ad id, ovvero il parametro passato a route::get in web.php, assegno il valore di $key che è l'indice della posizione dentro all'array comics --}}
+                            {{-- link documentazione https://laravel.com/docs/7.x/urls#urls-for-named-routes --}}
                             <figure class="series-image">
-                                <img src="{{ $item['thumb'] }}" alt="">
+                                <a class="comic-link" href="{{ route ('comic.show', ['id' => $key]) }}">
+                                    <img src="{{ $item['thumb'] }}" alt="">
+                                </a>
                             </figure>
 
                             <div class="series-info">
                                 <div class="series-name">
-                                    {{$item['series']}}
+                                    <a class="comic-link" href="{{ route ('comic.show', ['id' => $key]) }}">
+                                        {{$item['series']}}
+                                    </a>
                                 </div>
                                 <div class="type">
                                     {{$item['type']}}
@@ -32,6 +38,7 @@
                                     {{$item['price']}}
                                 </div>
                             </div>
+                            
                         </div>
                     @endforeach
 

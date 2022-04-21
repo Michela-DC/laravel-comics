@@ -1,0 +1,33 @@
+.store-container {
+    @include container;
+}
+
+.menu-section {
+    background-color: $blue;
+
+    .menu{
+        height: 115px;
+        @include flex-alignCenter;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+
+        .options{
+            @include flex-alignCenter;
+            gap: 10px;
+
+            img{
+                height: 50px;
+            }
+
+            &:last-child > img{
+                width: 53px;
+                height: 36px;
+            }
+            
+            a{
+                color: white;
+                font-size: 15px;
+            }
+        }
+    }
+}

@@ -1,16 +1,153 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap);* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap);.poster-row {
+  height: 80px;
+  width: 100%;
+  background-color: #0082F9;
+  position: relative;
+}
+.poster-row .series-image {
+  position: absolute;
+  left: 15%;
+  bottom: 20px;
+  border: 1px solid white;
+}
+.poster-row .series-image img {
+  display: block;
 }
 
-ul li {
-  list-style: none;
+.comic-info_container {
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+  padding: 50px 0;
+}
+.comic-info_container .series-title {
+  text-transform: uppercase;
+  color: navy;
+  margin-bottom: 20px;
+}
+.comic-info_container .series-info {
+  width: 65%;
+}
+.comic-info_container .series-info .availability {
+  height: 45px;
+  background-color: #55BA59;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.comic-info_container .series-info .availability .price-col {
+  height: 100%;
+  width: 70%;
+  border-right: 1px solid dimgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.comic-info_container .series-info .availability .price-col .price .country {
+  opacity: 0.7;
+}
+.comic-info_container .series-info .availability .price-col .if-available {
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+.comic-info_container .series-info .availability .check {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.comic-info_container .series-info .series-description {
+  color: dimgray;
+  line-height: 1.7rem;
+}
+.comic-info_container .advertisement {
+  width: 30%;
+  background-image: url("https://www.dccomics.com/sites/default/files/files/character-pops/superman_459Wx300H_589104907a0b05.70849485.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-transform: uppercase;
+  background-color: #0073AC;
+}
+.comic-info_container .advertisement .ad {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+}
+.comic-info_container .advertisement .ad-content {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.comic-info_container .advertisement .ad-content .ad-title {
+  color: white;
+  align-self: center;
+}
+.comic-info_container .advertisement .ad-content .btn-apply {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 150px;
+  height: 45px;
+  background-color: #FFE665;
+  border: none;
+}
+.comic-info_container .advertisement .ad-content .dc-visa {
+  color: white;
+  opacity: 0.7;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
-a {
-  text-decoration: none;
+.comic-specs {
+  background-color: #F6F6F6;
+}
+.comic-specs .talent-specs {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0 60px 0;
+}
+.comic-specs .talent-specs .talent, .comic-specs .talent-specs .specs {
+  width: 47%;
+}
+.comic-specs .talent-specs .talent .talent-title, .comic-specs .talent-specs .talent .specs-title, .comic-specs .talent-specs .specs .talent-title, .comic-specs .talent-specs .specs .specs-title {
+  color: navy;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+}
+.comic-specs .talent-specs .talent .detail-container, .comic-specs .talent-specs .specs .detail-container {
+  padding: 10px 0;
+  display: flex;
+  font-size: 0.8rem;
+  border-bottom: 1px solid lightgray;
+}
+.comic-specs .talent-specs .talent .detail-container .detail-title, .comic-specs .talent-specs .specs .detail-container .detail-title {
+  color: navy;
+  width: 40%;
+}
+.comic-specs .talent-specs .talent .detail-container .detail, .comic-specs .talent-specs .specs .detail-container .detail {
+  color: #0082F9;
+}
+.comic-specs .talent-specs .specs .detail-container .detail-title {
+  text-transform: capitalize;
+}
+.comic-specs .talent-specs .specs .detail-container .series {
+  text-transform: uppercase;
+}
+.comic-specs .talent-specs .specs .detail-container .price, .comic-specs .talent-specs .specs .detail-container .sale-date {
+  color: black;
 }
 
 .header-container {
@@ -51,84 +188,6 @@ a {
   height: 4px;
   width: 100%;
   bottom: 0;
-  background-color: #0082F9;
-}
-
-.jumbotron {
-  height: 398px;
-  background-image: url("../images/jumbotron.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.current-series {
-  background-color: #1C1C1C;
-}
-.current-series .series-container {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.current-series .series-container .section-title {
-  text-transform: uppercase;
-  color: white;
-  height: 53px;
-  width: 244px;
-  text-align: center;
-  line-height: 53px;
-  position: absolute;
-  bottom: 96%;
-  background-color: #0082F9;
-}
-.current-series .series-container .comics-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 53px;
-  gap: 2%;
-}
-.current-series .series-container .comics-container .card-wrapper {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: 15%;
-  margin-bottom: 30px;
-  color: white;
-  font-size: 14px;
-}
-.current-series .series-container .comics-container .card-wrapper .series-image {
-  color: white;
-  overflow: hidden;
-  height: 169px;
-  margin-bottom: 10px;
-}
-.current-series .series-container .comics-container .card-wrapper .series-image img {
-  width: 100%;
-}
-.current-series .series-container .comics-container .card-wrapper .series-info .series-name, .current-series .series-container .comics-container .card-wrapper .series-info .type, .current-series .series-container .comics-container .card-wrapper .series-info .price {
-  margin-bottom: 7px;
-}
-.current-series .series-container .comics-container .card-wrapper .series-info .series-name {
-  text-transform: uppercase;
-  font-weight: 500;
-}
-.current-series .series-container .comics-container .card-wrapper .series-info .type {
-  color: #acacac;
-}
-.current-series .series-container .comics-container .card-wrapper .series-info .price {
-  color: #55BA59;
-}
-.current-series .series-container .load-more {
-  width: 185px;
-  height: 35px;
-  align-self: center;
-  color: white;
-  border: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  margin-bottom: 25px;
   background-color: #0082F9;
 }
 
@@ -233,15 +292,98 @@ footer {
   align-items: center;
   gap: 18px;
 }
-.social-section .social-container .social-media .social-wrapper .social-link {
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.jumbotron {
+  height: 398px;
+  background-image: url("../images/jumbotron.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.current-series {
+  background-color: #1C1C1C;
+}
+.current-series .series-container {
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #303030;
-  font-size: 1.3rem;
-  background-color: #797979;
-  width: 35px;
+  flex-direction: column;
+  position: relative;
+}
+.current-series .series-container .section-title {
+  text-transform: uppercase;
+  color: white;
+  height: 53px;
+  width: 244px;
+  text-align: center;
+  line-height: 53px;
+  position: absolute;
+  bottom: 96%;
+  background-color: #0082F9;
+}
+.current-series .series-container .comics-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 53px;
+  gap: 2%;
+}
+.current-series .series-container .comics-container .card-wrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 15%;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: white;
+}
+.current-series .series-container .comics-container .card-wrapper .series-image {
+  overflow: hidden;
+  height: 169px;
+  margin-bottom: 10px;
+}
+.current-series .series-container .comics-container .card-wrapper .series-image .comic-link img {
+  width: 100%;
+}
+.current-series .series-container .comics-container .card-wrapper .series-info .series-name {
+  font-weight: 500;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+}
+.current-series .series-container .comics-container .card-wrapper .series-info .series-name .comic-link {
+  color: white;
+}
+.current-series .series-container .comics-container .card-wrapper .series-info .type {
+  color: #acacac;
+  margin-bottom: 7px;
+}
+.current-series .series-container .comics-container .card-wrapper .series-info .price {
+  color: #55BA59;
+  margin-bottom: 7px;
+}
+.current-series .series-container .load-more {
+  width: 185px;
   height: 35px;
-  border-radius: 50%;
-  padding-top: 2px;
+  align-self: center;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 25px;
+  background-color: #0082F9;
 }

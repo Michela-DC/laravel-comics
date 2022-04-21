@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-@import '/MyVariables.scss';
-@import '/MyMixins.scss';
+@import '../sass/MyVariables.scss';
+@import '../sass/MyMixins.scss';
+@import '../sass/partials/detail';
+@import '../sass/partials/header';
+@import '../sass/partials/store';
+@import '../sass/partials/footer';
 
 *{
     box-sizing: border-box;
@@ -15,55 +19,6 @@ ul li{
 
 a{
     text-decoration: none;
-}
-
-// HEADER -------------------
-
-.header-container {
-    @include container;
-    @include flex-alignCenter;
-    height: 115px;
-    justify-content: space-between;
-}
-
-.logo-wrapper {
-
-    .logo{
-        height: 80px;
-    }
-}
-
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    text-transform: uppercase;
-    height: 100%;
-
-    li {
-
-        a{
-            color: black;  
-            font-weight: bold; 
-            height: 100%; 
-            @include flex-alignCenter;
-            position: relative;
-        }
-    }
-
-    li:nth-child(2) a{
-        color: $blue;
-
-        &::after{
-            content: '';
-            display: block;
-            position: absolute;
-            height: 4px;
-            width: 100%;
-            bottom: 0;
-            background-color: $blue;
-        }
-    }
 }
 
 // MAIN ---------------------
@@ -107,43 +62,53 @@ a{
                 height: fit-content;
                 width: calc(90% / 6);
                 margin-bottom: 30px;
-                color: white;
                 font-size: 14px;
-                
+                color: white;
+
                 .series-image{
-                    color: white;
                     overflow: hidden;
                     height: 169px; 
                     margin-bottom: 10px;
+
+                    .comic-link{
                     
-                    img{
-                        width: 100%;
-                        // potevo anche usare object-fit e object-position, togliendo overflow e height da series-image:
-                        // width: 100%;
-                        // display: block;
-                        // aspect-ratio: 1/1;
-                        // object-fit: cover;
-                        // object-position: center;
+                        img{
+                            width: 100%;
+                            // potevo anche usare object-fit e object-position, togliendo overflow e height da series-image:
+                            // width: 100%;
+                            // display: block;
+                            // aspect-ratio: 1/1;
+                            // object-fit: cover;
+                            // object-position: center;
+                        }
                     }
                 }
+
+
                 .series-info{
                     
-                    .series-name, .type, .price{
-                        margin-bottom: 7px;
-                    }
                     .series-name{
-                        text-transform: uppercase;
                         font-weight: 500;
+                        margin-bottom: 7px;
+                        text-transform: uppercase;
+                        
+                        .comic-link{
+                            color: white;
+                        }
+                        
                     }
                     
                     .type{
                         color: #acacac;
+                        margin-bottom: 7px;
                     }
                     
                     .price{
                         color: #55BA59;
+                        margin-bottom: 7px;
                     }
                 }
+                
             }
 
         } 
@@ -162,112 +127,3 @@ a{
     }
   }
 
-// Store -------------------
-
-.store-container {
-    @include container;
-}
-.menu-section {
-    background-color: $blue;
-
-    .menu{
-        height: 115px;
-        @include flex-alignCenter;
-        justify-content: space-evenly;
-        text-transform: uppercase;
-
-        .options{
-            @include flex-alignCenter;
-            gap: 10px;
-
-            img{
-                height: 50px;
-            }
-
-            &:last-child > img{
-                width: 53px;
-                height: 36px;
-            }
-            
-            a{
-                color: white;
-                font-size: 15px;
-            }
-        }
-    }
-}
-
-//   FOOTER ----------------
-
-footer{
-    background-image: url('../images/footer-bg.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.info-section{
-    
-    .container{
-        @include container;
-        background-image: url('../images/dc-logo-bg.png');
-        background-position: right;
-        background-size: 45%;
-        background-repeat: no-repeat;
-        display: flex;
-        gap: 25px;
-        padding: 55px 0;
-        .col{
-            h4{
-                text-transform: uppercase;
-                color: white;
-                margin-bottom: 10px;
-            }
-            li{
-                line-height: 20px;
-                a{
-                    color: #acacac;
-                    font-size: 12px;
-                }
-            }
-            .dc-comics{
-                margin-bottom: 25px;
-            }
-        }
-    }
-}
-
-.social-section{ 
-    height: 90px;
-    background-color: #303030;
-    flex-grow: 1;
-    @include flex-alignCenter;
-
-    .social-container{
-        width: 80%;
-        margin: 0 auto;
-        @include flex-alignCenter;
-        justify-content: space-between;
-        
-        button{
-            background-color: transparent;
-            border: 2px solid $blue;
-            color: white;
-            padding: 12px;
-            text-transform: uppercase;
-        }
-
-        .social-media{
-            @include flex-alignCenter;
-            gap: 20px;
-            color: $blue;
-
-            .social-wrapper{
-                @include flex-alignCenter;
-                gap: 18px;
-            }
-        }
-    }
-}

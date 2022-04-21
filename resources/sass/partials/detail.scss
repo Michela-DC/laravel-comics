@@ -1,0 +1,189 @@
+.poster-row{
+    height: 80px;
+    width: 100%;
+    background-color: $blue;
+    position: relative;
+
+    .series-image{
+        position: absolute;
+        left: 15%;
+        bottom: 20px;
+        border: 1px solid white;
+
+        img{
+            display: block
+        }
+    }
+}
+
+.comic-info_container{
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+    padding: 50px 0;
+
+    .series-title{
+        text-transform: uppercase;
+        color: navy;
+        margin-bottom: 20px;
+    }
+
+    .series-info{
+        width: 65%;
+
+        .availability{
+            height: 45px;
+            background-color: #55BA59;
+            color: white;
+            border-radius: 5px;
+            @include flex-alignCenter;
+            margin-bottom: 20px;
+            
+            .price-col{
+                height: 100%;
+                width: 70%;
+                border-right: 1px solid dimgray;
+                @include flex-alignCenter;
+                justify-content: space-between;
+                padding: 0 30px;
+    
+                .price{
+                    .country{
+                        opacity: 0.7;
+                    }
+                }
+    
+                .if-available{
+                    opacity: 0.7;
+                    text-transform: uppercase;
+                }
+            }
+    
+            .check{
+                flex-grow: 1;
+                @include flex-alignCenter;
+                justify-content: center;
+                gap: 7px;
+            }
+        } //fine availability
+
+        .series-description{
+            color: dimgray;
+            line-height: 1.7rem;
+        }
+    } //fine series-info
+
+    .advertisement{
+        width: 30%;
+        background-image: url('https://www.dccomics.com/sites/default/files/files/character-pops/superman_459Wx300H_589104907a0b05.70849485.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        text-transform: uppercase;
+        background-color: #0073AC;
+
+        .ad{
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+        }
+
+        .ad-content{
+            padding: 20px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+
+            .ad-title{
+                color: white;
+                align-self: center;
+            }
+
+            .btn-apply{
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                width: 150px;
+                height: 45px;
+                background-color: #FFE665;
+                border: none;
+            }
+
+            .dc-visa{
+                color: white;
+                opacity: 0.7;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+    }
+
+}
+
+// Talent & Specs -------------------
+
+.comic-specs{
+    background-color: #F6F6F6;
+
+    .talent-specs{
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0 60px 0;
+    
+        .talent, .specs{
+            width: 47%;
+    
+            .talent-title, .specs-title{
+                color: navy;
+                padding-bottom: 20px;
+                border-bottom: 1px solid lightgray;
+            }
+    
+            .detail-container{
+                padding: 10px 0;
+                display: flex;
+                font-size: 0.8rem;
+                border-bottom: 1px solid lightgray;
+            
+                .detail-title{
+                    color: navy;
+                    width: 40%;
+                }
+    
+                .detail{
+                    color: $blue;;
+                }
+            }
+        }
+    
+        .specs{
+    
+            .detail-container{
+    
+                .detail-title{
+                    text-transform: capitalize;
+                }
+    
+                .series{
+                    text-transform: uppercase;
+                }
+        
+                .price, .sale-date{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+
+
+
