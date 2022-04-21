@@ -181,10 +181,10 @@
   align-items: center;
   position: relative;
 }
-.navbar li:nth-child(2) a {
+.navbar li .active {
   color: #0082F9;
 }
-.navbar li:nth-child(2) a::after {
+.navbar li .active::after {
   content: "";
   display: block;
   position: absolute;
